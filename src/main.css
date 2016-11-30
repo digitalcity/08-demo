@@ -77,14 +77,14 @@ button:focus,button:active,button:visited{
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 6px;
   padding:10px;
+  text-align: center;
 }
 .git-card h2{
   margin: 0;
   color:#00bcd4;
 }
 .about-form{
-  margin: 0 auto;
-  display: block;
-  width: 90%;
+  display: inline;
+  width: 80%;
   max-width: 560px;
 }
