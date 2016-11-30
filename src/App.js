@@ -4,10 +4,28 @@ import NavHeader from './component/NavHeader';
 import NavFooter from './component/NavFooter';
 
 class App extends React.Component {
+  constructor(){
+    super();
+    this.state={title:'Home'}
+  }
+  componentWillReceiveProps(){
+    this.setTitle();
+  }
+  componentWillMount(){
+    this.setTitle();
+  }
+  setTitle(){
+    this.setState({
+      title:this.context.router.isActive('/',true) ? 'Home' :
+      this.context.router.isActive('blog') ? 'Blog' :
+      this.context.router.isActive('work') ? 'Work' : 'About'
+    })
+  }
   render () {
+    // console.log(this.props);
     return(
       <div className='my-wrap'>
-        <NavHeader />
+        <NavHeader title={this.state.title}/>
 
         <div className='main'>
           {this.props.children}
@@ -18,5 +36,7 @@ class App extends React.Component {
     )
   }
 }
-
+App.contextTypes = {
+  router: React.PropTypes.object
+};
 export default App;
