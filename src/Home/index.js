@@ -8,7 +8,9 @@ class Home extends React.Component{
           <div className='home-item'>
             <h3>HI, I'M NEWMING</h3>
             <p>WEB DEVELOPER</p>
-            <button type="button" className="btn btn-primary">HIRE ME</button>
+            <button type="button" className="btn btn-primary">
+              <a href='https://newming.github.io' style={{color:'#fff'}}>HIRE ME</a>
+            </button>
           </div>
         </div>
       </div>

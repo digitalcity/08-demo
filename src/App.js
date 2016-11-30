@@ -1,5 +1,6 @@
 import React from 'react';
 
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NavHeader from './component/NavHeader';
 import NavFooter from './component/NavFooter';
 
@@ -7,6 +8,9 @@ class App extends React.Component {
   constructor(){
     super();
     this.state={title:'Home'}
+  }
+  getChildContext() {
+    return {muiTheme: getMuiTheme()};
   }
   componentWillReceiveProps(){
     this.setTitle();
@@ -16,13 +20,12 @@ class App extends React.Component {
   }
   setTitle(){
     this.setState({
-      title:this.context.router.isActive('/',true) ? 'Home' :
-      this.context.router.isActive('blog') ? 'Blog' :
-      this.context.router.isActive('work') ? 'Work' : 'About'
+      title:this.props.router.isActive('/',true) ? 'Home' :
+      this.props.router.isActive('blog') ? 'Blog' :
+      this.props.router.isActive('work') ? 'Work' : 'About'
     })
   }
   render () {
-    // console.log(this.props);
     return(
       <div className='my-wrap'>
         <NavHeader title={this.state.title}/>
@@ -36,7 +39,7 @@ class App extends React.Component {
     )
   }
 }
-App.contextTypes = {
-  router: React.PropTypes.object
+App.childContextTypes = {
+  muiTheme: React.PropTypes.object
 };
 export default App;
