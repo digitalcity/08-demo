@@ -88,3 +88,11 @@ button:focus,button:active,button:visited{
   width: 80%;
   max-width: 560px;
 }
+.show-git{
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 2px 6px;
+  justify-content: space-around;
+  color: teal;
+  font-size: 16px;
+  padding: 10px 0;
+}
