@@ -14,6 +14,7 @@ class Blog extends React.Component{
   componentDidMount(){
     axios.get('https://raw.githubusercontent.com/newming/08-demo/master/data/blogcard.json')
       .then( res => this.setState({data:res.data,wait:false}) )
+      .catch( err => alert(err))
   }
   render(){
     return(
