@@ -130,3 +130,6 @@ button:focus,button:active,button:visited{
 .blog-content h3{
   margin: 10px 0;
 }
+.item-wrap{
+  flex-grow: 1;
+}
