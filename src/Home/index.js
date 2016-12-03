@@ -1,4 +1,5 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Home extends React.Component{
   render(){
@@ -8,9 +9,7 @@ class Home extends React.Component{
           <div className='home-item'>
             <h3>HI, I'M NEWMING</h3>
             <p>WEB DEVELOPER</p>
-            <button type="button" className="btn btn-primary">
-              <a href='https://newming.github.io' style={{color:'#fff'}}>HIRE ME</a>
-            </button>
+            <RaisedButton label="hire me" secondary={true} />
           </div>
         </div>
       </div>
