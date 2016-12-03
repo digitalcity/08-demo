@@ -9,7 +9,7 @@ class Home extends React.Component{
           <div className='home-item'>
             <h3>HI, I'M NEWMING</h3>
             <p>WEB DEVELOPER</p>
-            <RaisedButton label="hire me" secondary={true} />
+            <RaisedButton label="hire me" secondary={true} href='http://duopingshidai.com'/>
           </div>
         </div>
       </div>

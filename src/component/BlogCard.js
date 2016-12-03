@@ -9,7 +9,8 @@ class BlogCard extends React.Component{
         <div className='blog-content clearfix'>
           <h3>{this.props.title}</h3>
           <p>{this.props.desc}</p>
-          <RaisedButton label="阅读更多" primary={true} />
+          {/* 下边的button要注意，引用的mui跳转页面，没有用link，注意href属性 */}
+          <RaisedButton label="阅读更多" primary={true} href={`#/item/${this.props.url}`}/>
         </div>
       </div>
     )
