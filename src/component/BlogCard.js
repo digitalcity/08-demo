@@ -10,7 +10,7 @@ class BlogCard extends React.Component{
           <h3>{this.props.title}</h3>
           <p>{this.props.desc}</p>
           {/* 下边的button要注意，引用的mui跳转页面，没有用link，注意href属性 */}
-          <RaisedButton label="阅读更多" primary={true} href={`#/item/${this.props.url}`}/>
+          <RaisedButton label="阅读更多" primary={true} href={`#/post/${this.props.url}`}/>
         </div>
       </div>
     )

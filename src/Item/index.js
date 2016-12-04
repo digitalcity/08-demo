@@ -22,7 +22,7 @@ class Item extends React.Component{
       <div className='item-wrap'>
         {
           this.state.data.length==0 ? <Loading/> :
-            <div className='post-wrap' dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />
+            <div className='post-content' dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />
         }
       </div>
     )
