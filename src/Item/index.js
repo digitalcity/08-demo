@@ -2,7 +2,9 @@ import React from 'react';
 
 import marked from 'marked';
 import axios from 'axios';
+import hljs from 'highlight.js';
 import Loading from '../component/Loading';
+
 class Item extends React.Component{
   constructor(){
     super();
@@ -18,6 +20,11 @@ class Item extends React.Component{
       .catch( err => alert(err))
   }
   render(){
+    marked.setOptions({
+      highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
     return(
       <div className='item-wrap'>
         {
